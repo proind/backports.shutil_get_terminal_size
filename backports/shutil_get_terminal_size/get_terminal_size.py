@@ -89,7 +89,7 @@ def get_terminal_size(fallback=(80, 24)):
     if columns <= 0 or lines <= 0:
         try:
             size = _get_terminal_size(sys.__stdout__.fileno())
-        except (NameError, OSError,AttributeError):
+        except (NameError, OSError, AttributeError):
             size = terminal_size(*fallback)
 
         if columns <= 0:
